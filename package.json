@@ -1,0 +1,24 @@
+{
+  "name": "weather-app-nodejs",
+  "version": "1.0.0",
+  "description": "Application to show real time weather data for a specific location, built using openweathermap api.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gangadhar1299/weather-app-nodejs.git"
+  },
+  "author": "Gangadhar N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gangadhar1299/weather-app-nodejs/issues"
+  },
+  "homepage": "https://github.com/gangadhar1299/weather-app-nodejs#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
+  }
+}
