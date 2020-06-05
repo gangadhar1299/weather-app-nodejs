@@ -1,24 +1,12 @@
 const geoCode = require('./utils/geoCode');
 const forecast = require('./utils/forecast');
 
-// const location = process.argv[2];
-
-// geoCode(location, (error, data) => {
-//     if (error)
-//         console.log(error);
-//     else
-//         forecast(data.latitude, data.longitude, (error, data) => {
-//             if (error)
-//                 console.log(error);
-//             else
-//                 console.log(`Currently in ${location} the temperature is ${data.temp} deg celsius and feels like ${data.feels_like} deg celsius.`);
-//         });
-// });
-
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const app = express();
+
+const port = process.env.PORT || 3000;
 
 const publicDirectoryPath = path.join(__dirname, './public');
 const viewsPath = path.join(__dirname, './templates/views');
@@ -80,6 +68,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
 });

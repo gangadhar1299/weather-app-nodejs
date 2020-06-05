@@ -10,7 +10,7 @@ form.addEventListener('submit', (e) => {
     messageOne.innerHTML = 'Loading...';
     messageTwo.innerHTML = '';
 
-    axios.get('http://localhost:3000/weather', {
+    axios.get('/weather', {
         params: {
             address: searchText.value
         }
