@@ -48,14 +48,14 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
         aboutText: 'This app shows real time weather data',
-        author: 'Adam'
+        author: 'Gangadhar N'
     });
 });
 
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        author: 'Adam',
+        author: 'Gangadhar N',
         helpText: 'Help Page'
     });
 });
@@ -63,7 +63,7 @@ app.get('/help', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: 'Weather App',
-        author: 'Adam',
+        author: 'Gangadhar N',
         errorText: 'Page not found'
     });
 });
