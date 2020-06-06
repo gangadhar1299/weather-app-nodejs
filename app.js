@@ -29,6 +29,7 @@ app.get('/weather', (req, res) => {
     const location = req.query.address;
 
     geoCode(location, (error, data = {}) => {
+        const place = data.place;
         if (error)
             return res.send({ error });
 
@@ -38,7 +39,7 @@ app.get('/weather', (req, res) => {
             res.send({
                 forecast: data,
                 location,
-                address: req.query.address
+                address: place
             });
         });
     });

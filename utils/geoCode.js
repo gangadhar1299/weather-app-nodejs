@@ -6,8 +6,9 @@ const geoCode = (location, callback) => {
     axios.get(url).then(response => {
         const latitude = response.data.features[0].center[1];
         const longitude = response.data.features[0].center[0];
+        const place = response.data.features[0].place_name;
         if (response.data.features[0])
-            callback(undefined, { latitude, longitude, location });
+            callback(undefined, { latitude, longitude, place });
         else callback('Location not found, try different location', undefined)
     }).catch(error => callback('Something went wrong', undefined));
 }

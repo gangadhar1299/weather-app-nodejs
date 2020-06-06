@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             appid: '329b281810dc77cd2403e445413f6e23'
         }
     })
-        .then(({ data }) => callback(undefined, data.main))
+        .then(({ data }) => { callback(undefined, data) })
         .catch(error => callback('Something went wrong', undefined));
 }
 
